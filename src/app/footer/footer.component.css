@@ -1,0 +1,29 @@
+footer {
+  background-color: #1b242f;
+}
+a,
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.underlineEffect {
+  position: relative;
+}
+
+a.underlineEffect:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f25757;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.underlineEffect:hover:before {
+  visibility: visible;
+  width: 100%;
+}

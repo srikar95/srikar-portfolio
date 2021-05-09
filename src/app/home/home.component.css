@@ -1,0 +1,167 @@
+* {
+  margin-right: 0px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: #f25757;
+  margin: 6px 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Raleway-bold";
+}
+
+div ul li a,
+div ul li a:hover {
+  text-decoration: none;
+}
+
+#home-section {
+  background: url(../../assets/homeBg.png);
+  /* background-color: #252934; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 700px;
+}
+
+#home-section .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 700px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+div ul li a {
+  font-size: 1.6em;
+  font-family: "Raleway-bold";
+  font-weight: 500;
+}
+
+.scrolledTo {
+  height: 4px;
+  width: 70px;
+  text-align: center;
+  position: relative;
+  background: #f25757;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 0;
+}
+
+@media (max-width: 575px) {
+  .scrolledTo {
+    display: none;
+  }
+}
+
+#nameBox {
+  margin-top: 283px;
+}
+
+.presentation-title {
+  font-size: 4em;
+  font-weight: 400;
+  margin: 0;
+  font-family: "Raleway-bold";
+  color: #ffffff;
+}
+
+.presentation-subtitle {
+  font-size: 2.8em;
+  font-weight: 300;
+  font-family: "Raleway-bold";
+  color: #ffffff;
+}
+
+@media (max-width: 575px) {
+  .presentation-title {
+    font-size: 2.2em;
+  }
+  .presentation-subtitle {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 576px) and (max-width: 999px) {
+  .presentation-title {
+    font-size: 2.9em;
+  }
+  .presentation-subtitle {
+    font-size: 2em;
+  }
+}
+
+.fa-arrow-down {
+  color: #f25757;
+  font-size: 30px;
+}
+.contactBg {
+  background-color: #252934;
+}
+
+.buttonColor {
+  color: #fff;
+  background-color: #f25757;
+}
+
+.profileUnderline {
+  height: 4px;
+  width: 70px;
+  text-align: center;
+  position: relative;
+  background: #252934;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 0;
+}
+
+hr {
+  height: 4px;
+  width: 70px;
+  text-align: center;
+  position: relative;
+  background: #fff;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 0;
+}
+
+.aboutPoint {
+  font-size: 20px;
+  font-family: "Raleway";
+}
+
+.border-right {
+  border-color: #252934 !important;
+  border-width: 4px !important;
+}
+
+@media (max-width: 1300px) {
+  .border-right {
+    border-width: 0px !important;
+  }
+}
+
+.profileCard {
+  background-color: #252934;
+  font-family: "Raleway-bold";
+  border: 2px solid;
+  border-radius: 16px;
+}
+
+.card-img-top {
+  border: 3px solid #252934;
+}

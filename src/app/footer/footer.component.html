@@ -1,0 +1,43 @@
+<footer id="main-footer" class="text-center">
+  <div class="container pt-5">
+    <div class="row mb-4 justify-content-around">
+      <div class="col-sm-3">
+        <a
+          class="underlineEffect text-light font-weight-bold"
+          (click)="openWindow('linkedin')"
+        >
+          Linkedin
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a
+          class="underlineEffect text-light font-weight-bold"
+          (click)="openWindow('twitter')"
+        >
+          Twitter
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a
+          class="underlineEffect text-light font-weight-bold"
+          (click)="openWindow('github')"
+        >
+          Github
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a
+          class="underlineEffect text-light font-weight-bold"
+          (click)="openWindow('gmail')"
+        >
+          Gmail
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-muted py-2">
+    <p class="lead">
+      Srikar Malloju &copy; <span>{{ date | date: "yyyy" }}</span>
+    </p>
+  </div>
+</footer>

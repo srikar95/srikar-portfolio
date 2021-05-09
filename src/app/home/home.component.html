@@ -1,0 +1,359 @@
+<nav class="navbar navbar-expand-sm fixed-top navbar-transparent">
+  <div class="container">
+    <button class="navbar-toggler" (click)="isMenuCollapsed = !isMenuCollapsed">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </button>
+    <div
+      id="navbarNav"
+      [ngbCollapse]="isMenuCollapsed"
+      class="collapse navbar-collapse"
+    >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-2">
+          <a
+            class="nav-link pointer"
+            style="color: #f25757"
+            (click)="scrollToElement(about); isMenuCollapsed = true"
+            >About</a
+          >
+          <hr class="scrolledTo" *ngIf="currentActive === 1" />
+        </li>
+        <li class="nav-item mr-2">
+          <a
+            class="nav-link pointer"
+            style="color: #f25757"
+            (click)="scrollToElement(skills); isMenuCollapsed = true"
+            >Skills</a
+          >
+          <hr class="scrolledTo" *ngIf="currentActive === 2" />
+        </li>
+        <li class="nav-item mr-2">
+          <a
+            class="nav-link pointer"
+            style="color: #f25757"
+            (click)="scrollToElement(profile); isMenuCollapsed = true"
+            >Profile</a
+          >
+          <hr class="scrolledTo" *ngIf="currentActive === 3" />
+        </li>
+        <li class="nav-item mr-2">
+          <a
+            class="nav-link pointer"
+            style="color: #f25757"
+            (click)="scrollToElement(contact); isMenuCollapsed = true"
+            >Contact</a
+          >
+          <hr class="scrolledTo" *ngIf="currentActive === 4" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header id="home-section">
+  <div class="dark-overlay">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div id="nameBox" class="container flex">
+          <div class="align-items-center">
+            <div class="text-center">
+              <h1 class="presentation-title mb-4">
+                Hello, I'm <span style="color: #f25757">Srikar Malloju</span>
+              </h1>
+              <h3 class="presentation-subtitle">I'm a Front-End developer</h3>
+              <button class="btn mt-5" (click)="scrollToElement(about)">
+                <i class="fa fa-arrow-down"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section #about class="mb-5">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="container flex py-5">
+        <div class="mb-5 align-items-center">
+          <div class="text-center">
+            <h2>ABOUT</h2>
+            <hr class="profileUnderline" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row justify-content-center">
+        <div class="col-sm-6">
+          <div class="card text-center" style="border: none">
+            <img
+              class="card-img-top img-thumbnail rounded-circle img-responsive"
+              src="../../assets/profImage.jpg"
+              alt=""
+            />
+            <div class="card-body"></div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="row justify-content-center">
+            <p class="aboutPoint" style="font-size: 25px">Hyderabad, India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="mr-5">
+        <ul *ngFor="let x of aboutList">
+          <li class="aboutPoint">{{ x }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section #skills class="pb-5 bg-light">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="container flex py-5">
+        <div class="mb-5 align-items-center">
+          <div class="text-center">
+            <h2>SKILLS</h2>
+            <hr class="profileUnderline" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="pr-3 ml-5">
+        <ul *ngFor="let x of skillsList">
+          <li class="aboutPoint">{{ x }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="ml-5 mr-5">
+        <h3>HTML5</h3>
+        <div class="progress mb-2">
+          <div
+            class="progress-bar"
+            style="width: 80%; background-color: #252934"
+          ></div>
+        </div>
+        <h3>CSS3</h3>
+        <div class="progress mb-2">
+          <div
+            class="progress-bar"
+            style="width: 80%; background-color: #252934"
+          ></div>
+        </div>
+        <h3>JavaScript</h3>
+        <div class="progress mb-2">
+          <div
+            class="progress-bar"
+            style="width: 80%; background-color: #252934"
+          ></div>
+        </div>
+        <h3>Angular</h3>
+        <div class="progress mb-2">
+          <div
+            class="progress-bar"
+            style="width: 75%; background-color: #252934"
+          ></div>
+        </div>
+        <h3>Bootstrap3</h3>
+        <div class="progress mb-2">
+          <div
+            class="progress-bar"
+            style="width: 60%; background-color: #252934"
+          ></div>
+        </div>
+        <h3>React Native</h3>
+        <div class="progress mb-2">
+          <div
+            class="progress-bar"
+            style="width: 40%; background-color: #252934"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section #profile class="mb-5">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="container flex py-5">
+        <div class="mb-5 align-items-center">
+          <div class="text-center">
+            <h2>PROFILE</h2>
+            <hr class="profileUnderline" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 border-right">
+      <div class="card text-white profileCard ml-5">
+        <div class="card-body">
+          <h4 class="card-title">Cogent Data Solutions</h4>
+          <p class="card-text">
+            Working as Angular developer in developing an application of the
+            organisation.
+          </p>
+          <p class="card-text">
+            <small>July 2020 - Present</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <!-- <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card
+                        has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text">
+                        <small>Last updated 3 mins ago</small>
+                    </p>
+                </div>
+            </div> -->
+    </div>
+    <div class="col-sm-6 border-right">
+      <!-- <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card
+                        has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text">
+                        <small>Last updated 3 mins ago</small>
+                    </p>
+                </div>
+            </div> -->
+    </div>
+    <div class="col-sm-6">
+      <div class="card text-white profileCard mr-5">
+        <div class="card-body">
+          <h4 class="card-title">Cognier Insights</h4>
+          <p class="card-text">
+            Worked as Front End Developer in building an admin dashboard
+            application. Designed and developed a mobile application using React
+            Native.
+          </p>
+          <p class="card-text">
+            <small>July 2019 - July 2020</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 border-right">
+      <div class="card text-white profileCard ml-5">
+        <div class="card-body">
+          <h4 class="card-title">Accenture</h4>
+          <p class="card-text">
+            Worked as Application Development Analyst for the organization.
+          </p>
+          <p class="card-text">
+            <small>June 2017 - June 2019</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <!-- <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card
+                        has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text">
+                        <small>Last updated 3 mins ago</small>
+                    </p>
+                </div>
+            </div> -->
+    </div>
+    <div class="col-sm-6 border-right">
+      <!-- <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card
+                        has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text">
+                        <small>Last updated 3 mins ago</small>
+                    </p>
+                </div>
+            </div> -->
+    </div>
+    <div class="col-sm-6">
+      <div class="card text-white profileCard mr-5">
+        <div class="card-body">
+          <h4 class="card-title">JNTU Kakinada</h4>
+          <p class="card-text">
+            Completed Bachelor's Degree in Mechanical Engineering from Kakinada.
+          </p>
+          <p class="card-text">
+            <small>October 2013 - April 2017</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section #contact class="contactBg">
+  <svg
+    preserveAspectRatio="none"
+    viewBox="0 0 100 102"
+    height="75"
+    width="100%"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    class="svgcolor-light"
+  >
+    <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+  </svg>
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div id="contact" class="container flex py-5">
+        <div class="mb-5 align-items-center">
+          <div class="text-center text-white">
+            <h2>CONTACT</h2>
+            <hr />
+          </div>
+        </div>
+
+        <form class="py-5">
+          <div class="form-group">
+            <div class="input-group input-group-lg mb-1">
+              <input
+                type="text"
+                class="form-control bg-dark text-white"
+                placeholder="Name"
+              />
+            </div>
+            <div class="input-group input-group-lg mb-1">
+              <input
+                type="email"
+                class="form-control bg-dark text-white"
+                placeholder="Email"
+              />
+            </div>
+            <div class="input-group input-group-lg mb-1">
+              <textarea
+                type="text"
+                class="form-control bg-dark text-white"
+                placeholder="Message"
+              ></textarea>
+            </div>
+          </div>
+          <button type="button" class="buttonColor btn btn-block btn-lg">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
